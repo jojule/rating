@@ -1,0 +1,56 @@
+@import "../reindeer/reindeer.scss";
+
+/* This contains all of your theme. */
+@mixin rating {
+
+  /* Include all the styles from the reindeer theme */
+  @include reindeer;
+
+  // TODO this layout needs to be designed and responsive layout added
+  .presentation-form {
+
+    .v-textarea, .v-textfield, .v-datefield {
+      margin-bottom: 5px;
+    }
+
+    input.v-textfield {
+      background-color: transparent;
+      border-style: hidden;
+    }
+
+    input.v-textfield.topic {
+      width: 100%;
+      font-size: 30px;
+      height: 40px;
+    }
+
+    .v-datefield {
+      width: 30%;
+    }
+
+    .v-textfield.speaker, .v-caption-speaker {
+      position: absolute;
+      right: 0;
+      width: 60%;
+
+    }
+
+    .v-textfield.speaker {
+      margin-top: 1.2em;
+    }
+
+    .v-textarea {
+      width: 100%;
+      height: 20em;
+      padding-right: 300px;
+    }
+
+    .v-button {
+      float: right;
+      margin-right: 5px;
+      margin-top: 15px;
+    }
+
+  }
+
+}
