@@ -1,0 +1,7 @@
+.idea
+META-INF
+rating.iml
+rebel.xml
+target
+src/main/webapp/VAADIN/widgetsets
+src/main/webapp/VAADIN/themes/rating/styles.css
