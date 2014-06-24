@@ -1,6 +1,5 @@
 package org.vaadin.rating.ui;
 
-import com.vaadin.addon.jpacontainer.JPAContainer;
 import com.vaadin.data.Property;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Table;
@@ -19,7 +18,8 @@ class PresentationList extends VerticalLayout {
 
     @Inject RatingService service;
     @Inject User user;
-    JPAContainer<Presentation> datasource;
+    @Inject
+    PresentationContainer datasource;
 
     PresentationList() {
         addComponents(presentations);
@@ -33,7 +33,6 @@ class PresentationList extends VerticalLayout {
     }
 
     @PostConstruct void init() {
-        datasource = service.getPresentationsContainer();
         presentations.setContainerDataSource(datasource);
         presentations.setVisibleColumns("topic", "speaker");
 

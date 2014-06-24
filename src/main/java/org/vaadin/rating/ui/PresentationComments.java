@@ -18,7 +18,10 @@ public class PresentationComments extends VerticalLayout {
     User user;
 
     Table commentList = new Table("Comments");
-    JPAContainer<Comment> datasource;
+    
+    @Inject
+    CommentContainer datasource;
+    
     TextField commentField = new TextField();
     Button addButton = new Button("Comment", this::comment);
 
@@ -47,12 +50,10 @@ public class PresentationComments extends VerticalLayout {
 
     void setPresentation(Presentation presentation) {
         this.presentation = presentation;
-
-        datasource = service.getComments(presentation);
+        datasource.filterByPresentation(presentation);
         commentList.setContainerDataSource(datasource);
         commentList.setVisibleColumns("timeGiven", "email", "comment");
         commentList.setColumnExpandRatio("comment", 1f);
-
     }
 
 }

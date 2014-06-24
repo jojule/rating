@@ -1,22 +1,15 @@
 package org.vaadin.rating.service;
 
-import com.vaadin.addon.jpacontainer.JPAContainer;
-import com.vaadin.addon.jpacontainer.JPAContainerFactory;
-import com.vaadin.data.util.filter.Compare;
 import org.vaadin.rating.service.data.Comment;
 import org.vaadin.rating.service.data.Presentation;
 import org.vaadin.rating.service.data.Rating;
 
 import javax.ejb.Singleton;
 import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.event.Event;
-import javax.enterprise.util.TypeLiteral;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import java.lang.annotation.Annotation;
 import java.util.HashMap;
 import java.util.List;
 
@@ -109,22 +102,12 @@ public class RatingService {
         }
     }
 
-    public JPAContainer<Comment> getComments(Presentation presentation) {
-        JPAContainer<Comment> c = JPAContainerFactory.makeReadOnly(Comment.class, em);
-        c.addContainerFilter(new Compare.Equal("presentation", presentation));
-        return c;
-    }
-
     public void addComment(String identity, Presentation presentation, String comment) {
         Comment c = new Comment();
         c.setEmail(identity);
         c.setPresentation(presentation);
         c.setComment(comment);
         em.persist(c);
-    }
-
-    public JPAContainer<Presentation> getPresentationsContainer() {
-        return JPAContainerFactory.makeReadOnly(Presentation.class, em);
     }
 
     public Presentation addPresentation() {
