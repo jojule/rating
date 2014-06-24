@@ -199,10 +199,11 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-			</plugin>
+	                <plugin>
+	                    <groupId>org.wildfly.plugins</groupId>
+	                    <artifactId>wildfly-maven-plugin</artifactId>
+	                    <version>1.0.2.Final</version>
+	                </plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
