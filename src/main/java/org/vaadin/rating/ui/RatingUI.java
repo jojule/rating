@@ -35,6 +35,9 @@ public class RatingUI extends UI
     protected void init(VaadinRequest request) {
         navigator.addProvider(viewProvider);
 
+        // Login not implemented, but he rest of the application assumes that user is logged in
+        user.setEmail("unknown@somewhere.net");
+
         // Alpha level CDI add-on is still quite chatty, lets cut the noice
         Logger.getLogger(CDIViewProvider.class.getCanonicalName()).setLevel(Level.SEVERE);
     }

@@ -5,6 +5,7 @@ import org.vaadin.rating.service.data.Presentation;
 import org.vaadin.rating.service.data.Rating;
 
 import javax.ejb.Singleton;
+import javax.ejb.Startup;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -14,59 +15,12 @@ import java.util.HashMap;
 import java.util.List;
 
 @ApplicationScoped
+@Startup
 @Singleton
 public class RatingService {
 
-    private HashMap<Long, String> idToEmailMap = new HashMap<>();
-    private HashMap<String, Long> emailToIdMap = new HashMap<>();
-
     @PersistenceContext
     private EntityManager em;
-
-    public String sendLoginLink(String email, String appLocation) {
-
-        Long id;
-        if (emailToIdMap.containsKey(email)) id = emailToIdMap.get(email);
-        else {
-            id = (long) (Math.random() * Long.MAX_VALUE);
-            emailToIdMap.put(email, id);
-            idToEmailMap.put(id, email);
-        }
-        int trail = appLocation.indexOf("#!");
-        if (trail > 0) appLocation = appLocation.substring(0, trail);
-        String url = appLocation + "#!/" + id;
-        sendEmail(email, email + " can log in at " + url);
-
-        return url;
-        
-        // TODO add map cleanup to conserve memory
-    }
-
-    private void sendEmail(String email, String messageTxt) {
-        System.out.println("[EMAIL TO " + email + "] " + messageTxt);
-
-        // TODO send email with javax.mail
-        //        Session mailSession = Session.getDefaultInstance(new Properties());
-        //        MimeMessage msg = new MimeMessage(mailSession);
-        //        try {
-        //            msg.setFrom(new InternetAddress("admin@rating.vaadin.org"));
-        //            msg.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-        //            msg.setSubject("Rating login");
-        //            msg.setText(messageTxt);
-        //            Transport.send(msg);
-        //        } catch (MessagingException e) {
-        //            e.printStackTrace();
-        //        }
-    }
-
-    public String login(String identity) {
-        try {
-            return idToEmailMap.get(Long.valueOf(identity));
-        } catch (Exception any) {
-            return null;
-        }
-
-    }
 
     public void setRating(String email, Presentation presentation, double rating) {
         Query q = em.createQuery("select r from Rating r where r.presentation = :p and r.email = :e");

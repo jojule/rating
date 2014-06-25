@@ -52,7 +52,7 @@ class PresentationList extends VerticalLayout {
 
     void presentationSelectedFromList(Property.ValueChangeEvent e) {
         String param = (presentations.getValue() != null) ? "/" + presentations.getValue().toString() : "";
-        getUI().getNavigator().navigateTo(PresentationsView.URI + param);
+        getUI().getNavigator().navigateTo(param);
 
     }
 
