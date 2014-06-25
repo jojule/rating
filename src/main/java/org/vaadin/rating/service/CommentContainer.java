@@ -1,4 +1,4 @@
-package org.vaadin.rating.ui;
+package org.vaadin.rating.service;
 
 import com.vaadin.addon.jpacontainer.JPAContainer;
 import com.vaadin.addon.jpacontainer.provider.CachingLocalEntityProvider;
