@@ -1,18 +1,11 @@
 package org.vaadin.rating.service.data;
 
-import javax.annotation.PostConstruct;
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.Date;
 
-@Stateless
 public class MockupDatabaseGenerator {
 
-    @PersistenceContext
-    private EntityManager em;
-
-    public void generate() {
+    public static void generate(EntityManager em) {
         for (int i = 0; i < 50; i++) {
             Presentation p = new Presentation();
 

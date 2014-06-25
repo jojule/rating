@@ -26,9 +26,6 @@ public class RatingService {
     @PersistenceContext
     private EntityManager em;
 
-    @Inject
-    MockupDatabaseGenerator mockupDatabaseGenerator;
-
     public void sendLoginLink(String email, String appLocation) {
 
         Long id;
@@ -133,7 +130,7 @@ public class RatingService {
 
     @PostConstruct
     void initDatabaseWithMockupData() {
-         mockupDatabaseGenerator.generate();
+         MockupDatabaseGenerator.generate(em);
     }
 
 }
