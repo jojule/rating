@@ -2,7 +2,6 @@ package org.vaadin.rating.ui;
 
 import com.vaadin.data.fieldgroup.FieldGroup;
 import com.vaadin.data.util.BeanItem;
-import com.vaadin.server.Responsive;
 import com.vaadin.shared.ui.datefield.Resolution;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.Reindeer;
@@ -13,7 +12,7 @@ import org.vaadin.rating.service.data.Presentation;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
-public class PresentationForm extends CssLayout {
+public class PresentationForm extends VerticalLayout {
 
     Presentation presentation;
     @Inject
@@ -34,21 +33,20 @@ public class PresentationForm extends CssLayout {
     @PostConstruct
     void init() {
         addComponents(topic, speaker, startTime, overview);
+        topic.setWidth("100%");
+        speaker.setWidth("100%");
+        overview.setWidth("100%");
+
         if (user.isAdmin()) {
-            addComponents(deleteButton, resetButton, saveButton);
-            addStyleName("admin");
+            HorizontalLayout buttons = new HorizontalLayout(deleteButton, resetButton, saveButton);
+            buttons.setSpacing(true);
+            addComponents(buttons);
+            saveButton.setStyleName(Reindeer.BUTTON_DEFAULT);
         }
 
         startTime.setResolution(Resolution.MINUTE);
 
-        Responsive.makeResponsive(this);
-        setWidth("100%");
-        setStyleName("presentation-form");
-        speaker.setStyleName("speaker");
-        topic.setStyleName("topic");
-        saveButton.setStyleName("primary");
-        resetButton.addStyleName("borderless");
-        deleteButton.addStyleName("danger");
+        setSpacing(true);
     }
 
     void save(Button.ClickEvent e) {
