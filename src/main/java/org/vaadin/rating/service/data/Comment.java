@@ -12,7 +12,7 @@ public class Comment {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
-    @NotNull
+    @NotNull @Lob
     private String comment = "";
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)

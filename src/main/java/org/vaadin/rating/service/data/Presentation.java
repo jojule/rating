@@ -16,7 +16,7 @@ public class Presentation {
     private Date startTime = new Date();
     @NotNull
     private String topic = "Unknown";
-    @NotNull
+    @NotNull @Lob
     private String overview = "";
 
     public Long getId() {
