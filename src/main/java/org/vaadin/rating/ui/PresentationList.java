@@ -17,27 +17,27 @@ class PresentationList extends VerticalLayout {
     Table presentations = new Table();
     Button addButton = new Button("Add presentation", this::addPresentation);
 
-    @Inject RatingService service;
-    @Inject User user;
+    @Inject
+    RatingService service;
+    @Inject
+    User user;
     @Inject
     PresentationContainer datasource;
 
-    PresentationList() {
-        addComponents(presentations);
+    @PostConstruct
+    void init() {
+        setSizeFull();
+
+        addComponent(presentations);
         setExpandRatio(presentations, 1f);
         presentations.setSizeFull();
-        setSizeFull();
-        addButton.setWidth("100%");
-
         presentations.setSelectable(true);
         presentations.addValueChangeListener(this::presentationSelectedFromList);
-    }
-
-    @PostConstruct void init() {
         presentations.setContainerDataSource(datasource);
         presentations.setVisibleColumns("topic", "speaker");
 
         if (user.isAdmin()) addComponent(addButton);
+        addButton.setWidth("100%");
     }
 
     void addPresentation(Button.ClickEvent e) {
