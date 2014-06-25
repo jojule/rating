@@ -8,7 +8,6 @@ import org.vaadin.rating.service.data.Rating;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
@@ -31,7 +30,7 @@ public class RatingService {
         Long id;
         if (emailToIdMap.containsKey(email)) id = emailToIdMap.get(email);
         else {
-            id = Long.valueOf((long) (Math.random() * Long.MAX_VALUE));
+            id = (long) (Math.random() * Long.MAX_VALUE);
             emailToIdMap.put(email, id);
             idToEmailMap.put(id, email);
         }
@@ -44,7 +43,7 @@ public class RatingService {
     }
 
     private void sendEmail(String email, String messageTxt) {
-        System.out.println("[EMAIL] " + messageTxt);
+        System.out.println("[EMAIL TO " + email + "] " + messageTxt);
 
         // TODO send email with javax.mail
         //        Session mailSession = Session.getDefaultInstance(new Properties());
@@ -91,7 +90,7 @@ public class RatingService {
         Query q = em.createQuery("select avg(r.rating) from Rating r where r.presentation = :p");
         q.setParameter("p", presentation);
         Double average = (Double) q.getSingleResult();
-        return average == null ? 0 : average.doubleValue();
+        return average == null ? 0 : average;
     }
 
     public double getRating(Presentation presentation, String email) {
@@ -130,7 +129,7 @@ public class RatingService {
 
     @PostConstruct
     void initDatabaseWithMockupData() {
-         MockupDatabaseGenerator.generate(em);
+        MockupDatabaseGenerator.generate(em);
     }
 
 }
