@@ -1,41 +1,32 @@
 package org.vaadin.rating.ui;
 
-import com.vaadin.cdi.CDIUI;
-import com.vaadin.cdi.CDIViewProvider;
-import com.vaadin.navigator.Navigator;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.UI;
-import org.vaadin.rating.service.RatingService;
-import org.vaadin.rating.service.User;
+import com.vaadin.server.VaadinServlet;
+import com.vaadin.ui.*;
 
-import javax.inject.Inject;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.servlet.annotation.WebServlet;
 
 @SuppressWarnings("serial")
-@CDIUI
-public class RatingUI extends UI
-{
+public class RatingUI extends UI {
 
-    @Inject
-    CDIViewProvider viewProvider;
+    @WebServlet(value = "/*")
+    public static class Servlet extends VaadinServlet {
+    }
 
-    @Inject
-    RatingService service;
+    TextField name = new TextField("Who are you?");
+    Button greetButton = new Button("Greet");
+    VerticalLayout layout = new VerticalLayout(name, greetButton);
 
-    @Inject
-    User user;
-
-    Navigator navigator = new Navigator(this, this);
 
     @Override
     protected void init(VaadinRequest request) {
-        navigator.addProvider(viewProvider);
 
-        // Login not implemented, but he rest of the application assumes that user is logged in
-        user.setEmail("unknown@somewhere.net");
+        setContent(layout);
 
-        // Alpha level CDI add-on is still quite chatty, lets cut the noice
-        Logger.getLogger(CDIViewProvider.class.getCanonicalName()).setLevel(Level.SEVERE);
+        layout.setSizeFull();
+        layout.setComponentAlignment(name, Alignment.BOTTOM_CENTER);
+        layout.setComponentAlignment(greetButton, Alignment.TOP_CENTER);
+
+        greetButton.addClickListener(e -> Notification.show("Hi " + name.getValue()));
     }
 }
