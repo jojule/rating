@@ -15,7 +15,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Theme("valo")
-@Widgetset("org.vaadin.rating.RatingWidgetSet")
 @SuppressWarnings("serial")
 @CDIUI
 public class RatingUI extends UI
