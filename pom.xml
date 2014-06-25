@@ -75,16 +75,6 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-cdi</artifactId>
-            <version>1.0.0.alpha2</version>
-        </dependency>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
-            <version>7.0</version>
-        </dependency>
     </dependencies>
 
 	<build>
