@@ -16,7 +16,7 @@ public class PresentationComments extends VerticalLayout {
     @Inject
     User user;
 
-    Table commentList = new Table("Comments");
+    Table commentList = new Table();
     
     @Inject
     CommentContainer datasource;
@@ -31,10 +31,10 @@ public class PresentationComments extends VerticalLayout {
         commentList.setPageLength(0);
         commentList.setColumnHeaderMode(Table.ColumnHeaderMode.HIDDEN);
         commentList.setWidth("100%");
+        commentList.setVisible(false);
 
         commentLine.setExpandRatio(commentField, 1f);
         commentLine.setWidth("100%");
-        commentLine.setSpacing(true);
         commentField.setWidth("100%");
         setSpacing(true);
     }
@@ -44,6 +44,7 @@ public class PresentationComments extends VerticalLayout {
             service.addComment(user.getEmail(), presentation, commentField.getValue());
             datasource.refresh();
             commentField.setValue("");
+            commentList.setVisible(true);
         }
     }
 
@@ -53,6 +54,7 @@ public class PresentationComments extends VerticalLayout {
         commentList.setContainerDataSource(datasource);
         commentList.setVisibleColumns("timeGiven", "email", "comment");
         commentList.setColumnExpandRatio("comment", 1f);
+        commentList.setVisible(datasource.size() > 0);
     }
 
 }
