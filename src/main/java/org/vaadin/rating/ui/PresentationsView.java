@@ -9,10 +9,8 @@ import org.vaadin.rating.service.User;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
-@CDIView(value = PresentationsView.URI)
+@CDIView
 class PresentationsView extends HorizontalSplitPanel implements View {
-    static final String URI = "presentations";
-
     @Inject
     PresentationDetails details;
     @Inject
@@ -26,7 +24,6 @@ class PresentationsView extends HorizontalSplitPanel implements View {
     }
 
     public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
-        if (user.getEmail() == null) getUI().getNavigator().navigateTo("");
         details.setPresentation(list.getPresentation(viewChangeEvent.getParameters()));
     }
 }
