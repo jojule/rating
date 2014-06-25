@@ -34,12 +34,15 @@ public class PresentationForm extends CssLayout {
     @PostConstruct
     void init() {
         addComponents(topic, speaker, startTime, overview);
-        if (user.isAdmin())
+        if (user.isAdmin()) {
             addComponents(deleteButton, resetButton, saveButton);
+            addStyleName("admin");
+        }
 
         startTime.setResolution(Resolution.MINUTE);
 
         Responsive.makeResponsive(this);
+        setWidth("100%");
         setStyleName("presentation-form");
         speaker.setStyleName("speaker");
         topic.setStyleName("topic");
