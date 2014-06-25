@@ -5,6 +5,7 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.HorizontalSplitPanel;
 import org.vaadin.rating.service.User;
+import org.vaadin.rating.service.data.Presentation;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -24,6 +25,8 @@ class PresentationsView extends HorizontalSplitPanel implements View {
     }
 
     public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
-        details.setPresentation(list.getPresentation(viewChangeEvent.getParameters()));
+        Presentation mockPresentation = new Presentation();
+        mockPresentation.setTopic("Presentation number " + viewChangeEvent.getParameters());
+        details.setPresentation(mockPresentation);
     }
 }
