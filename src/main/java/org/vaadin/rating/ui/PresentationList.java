@@ -4,6 +4,7 @@ import com.vaadin.data.Property;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Table;
 import com.vaadin.ui.VerticalLayout;
+import org.vaadin.rating.service.PresentationContainer;
 import org.vaadin.rating.service.RatingService;
 import org.vaadin.rating.service.User;
 import org.vaadin.rating.service.data.Presentation;

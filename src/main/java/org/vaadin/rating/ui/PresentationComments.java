@@ -1,10 +1,9 @@
 package org.vaadin.rating.ui;
 
-import com.vaadin.addon.jpacontainer.JPAContainer;
 import com.vaadin.ui.*;
+import org.vaadin.rating.service.CommentContainer;
 import org.vaadin.rating.service.RatingService;
 import org.vaadin.rating.service.User;
-import org.vaadin.rating.service.data.Comment;
 import org.vaadin.rating.service.data.Presentation;
 
 import javax.inject.Inject;
