@@ -23,7 +23,6 @@ class PresentationsView extends HorizontalSplitPanel implements View {
     @PostConstruct
     void buildLayout() {
         addComponents(list, details);
-        setSplitPosition(30f, Unit.PERCENTAGE);
     }
 
     public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
