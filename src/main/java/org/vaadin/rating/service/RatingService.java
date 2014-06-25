@@ -88,7 +88,6 @@ public class RatingService {
             r.setRating(rating);
             em.merge(r);
         }
-        // Fire CDI event about the update
     }
 
     public double getRating(Presentation presentation) {
@@ -120,19 +119,16 @@ public class RatingService {
     public Presentation addPresentation() {
         Presentation p = new Presentation();
         em.persist(p);
-        // Fire CDI event about the update
         return p;
     }
 
     public void updatePresentation(Presentation presentation) {
         em.merge(presentation);
-        // Fire CDI event about the update
     }
 
     public void deletePresentation(Presentation presentation) {
         Query q = em.createQuery("delete from Presentation p where p.id=" + presentation.getId());
         q.executeUpdate();
-        // Fire CDI event about the update
     }
 
     @PostConstruct

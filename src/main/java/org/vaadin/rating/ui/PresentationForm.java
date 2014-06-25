@@ -71,7 +71,6 @@ public class PresentationForm extends CssLayout {
     }
 
     void updatePresentationList() {
-        // TODO use CDI events to refresh and decouple
         ((PresentationsView)getParent().getParent()).list.datasource.refresh();
     }
 
