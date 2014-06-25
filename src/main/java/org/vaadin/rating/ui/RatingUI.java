@@ -14,7 +14,6 @@ import javax.inject.Inject;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@Theme("rating")
 @Widgetset("org.vaadin.rating.RatingWidgetSet")
 @SuppressWarnings("serial")
 @CDIUI
