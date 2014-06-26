@@ -34,8 +34,8 @@ $v-app-loading-text: "Loading resources...";
 
     input.v-textfield.topic {
       width: 100%;
-      font-size: 30px;
-      height: 40px;
+      font-size: 1.2 * $v-font-size;
+      height: 1.2 * $v-unit-size;
     }
 
     .v-textarea {
@@ -53,8 +53,8 @@ $v-app-loading-text: "Loading resources...";
 
   .presentation-form[width-range~="0-400px"] {
     input.v-textfield.topic {
-      font-size: 20px;
-      height: 30px;
+      font-size: $v-font-size;
+      height: $v-unit-size;
     }
 
     .v-textfield, .v-datefield {
@@ -66,8 +66,8 @@ $v-app-loading-text: "Loading resources...";
 
   .presentation-form[width-range~="600px-"] {
     input.v-textfield.topic {
-      font-size: 40px;
-      height: 50px;
+      font-size: 1.5 * $v-font-size;
+      height: 1.5 * $v-unit-size;
     }
   }
 
