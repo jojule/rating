@@ -1,11 +1,9 @@
 package org.vaadin.rating.service;
 
 import org.vaadin.rating.service.data.Comment;
-import org.vaadin.rating.service.data.MockupDatabaseGenerator;
 import org.vaadin.rating.service.data.Presentation;
 import org.vaadin.rating.service.data.Rating;
 
-import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
@@ -125,11 +123,6 @@ public class RatingService {
     public void deletePresentation(Presentation presentation) {
         Query q = em.createQuery("delete from Presentation p where p.id=" + presentation.getId());
         q.executeUpdate();
-    }
-
-    @PostConstruct
-    void initDatabaseWithMockupData() {
-        MockupDatabaseGenerator.generate(em);
     }
 
 }
