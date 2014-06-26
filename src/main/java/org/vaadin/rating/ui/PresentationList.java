@@ -35,6 +35,10 @@ class PresentationList extends VerticalLayout {
         presentations.addValueChangeListener(this::presentationSelectedFromList);
         presentations.setContainerDataSource(datasource);
         presentations.setVisibleColumns("topic", "speaker");
+        presentations.setColumnExpandRatio("topic", 2.0f);
+        presentations.setColumnExpandRatio("speaker", 1.0f);
+        presentations.addStyleName("borderless");
+        presentations.addStyleName("no-horizontal-lines");
 
         if (user.isAdmin()) addComponent(addButton);
         addButton.setWidth("100%");

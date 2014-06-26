@@ -15,11 +15,23 @@ $v-app-loading-text: "Loading resources...";
 
 @import "../valo/valo";
 
+
+
+@mixin width-range($min, $max: null) {
+  &[width-range~="#{$min}-#{$max}"] {
+    @content;
+  }
+};
+
+
 /* This contains all of your theme. */
 @mixin rating {
 
-  @include v-valo;
-  @include v-valo-component-group;
+  @include valo;
+  
+  .v-table-cell-content {
+    white-space: normal;
+  }
 
   .presentation-form {
 
@@ -48,31 +60,28 @@ $v-app-loading-text: "Loading resources...";
       margin-right: 5px;
       margin-top: 10px;
     }
+    
+    @include width-range(0, 400px) {
+      input.v-textfield.topic {
+        font-size: $v-font-size;
+        height: $v-unit-size;
+      }
+
+      .v-textfield, .v-datefield {
+        width: 100%;
+      }
+    }
+    
+    @include width-range(600px) {
+      input.v-textfield.topic {
+        font-size: 1.5 * $v-font-size;
+        height: 1.5 * $v-unit-size;
+      }
+    }
 
   }
 
-  .presentation-form[width-range~="0-400px"] {
-    input.v-textfield.topic {
-      font-size: $v-font-size;
-      height: $v-unit-size;
-    }
-
-    .v-textfield, .v-datefield {
-      width: 100%;
-    }
-
-  }
-
-
-  .presentation-form[width-range~="600px-"] {
-    input.v-textfield.topic {
-      font-size: 1.5 * $v-font-size;
-      height: 1.5 * $v-unit-size;
-    }
-  }
-
-    .presentation-form.admin {
-
+  .presentation-form.admin {
     .v-textfield {
       background-color: transparent;
       border-style: hidden;

@@ -35,6 +35,7 @@ public class PresentationComments extends VerticalLayout {
 
         commentLine.setExpandRatio(commentField, 1f);
         commentLine.setWidth("100%");
+        commentLine.setSpacing(true);
         commentField.setWidth("100%");
         setSpacing(true);
     }
