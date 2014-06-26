@@ -1,11 +1,9 @@
 package org.vaadin.rating.service;
 
 import org.vaadin.rating.service.data.Comment;
-import org.vaadin.rating.service.data.MockupDatabaseGenerator;
 import org.vaadin.rating.service.data.Presentation;
 import org.vaadin.rating.service.data.Rating;
 
-import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
@@ -25,7 +23,7 @@ public class RatingService {
     @PersistenceContext
     private EntityManager em;
 
-    public void sendLoginLink(String email, String appLocation) {
+    public String sendLoginLink(String email, String appLocation) {
 
         Long id;
         if (emailToIdMap.containsKey(email)) id = emailToIdMap.get(email);
@@ -39,6 +37,8 @@ public class RatingService {
         String url = appLocation + "#!/" + id;
         sendEmail(email, email + " can log in at " + url);
 
+        return url;
+        
         // TODO add map cleanup to conserve memory
     }
 
@@ -125,11 +125,6 @@ public class RatingService {
     public void deletePresentation(Presentation presentation) {
         Query q = em.createQuery("delete from Presentation p where p.id=" + presentation.getId());
         q.executeUpdate();
-    }
-
-    @PostConstruct
-    void initDatabaseWithMockupData() {
-        MockupDatabaseGenerator.generate(em);
     }
 
 }

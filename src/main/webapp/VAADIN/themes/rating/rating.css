@@ -1,0 +1,1152 @@
+@-webkit-keyframes valo-placeholder-animate-in {
+  0% {
+    visibility: visible;
+  }
+}
+
+@-moz-keyframes valo-placeholder-animate-in {
+  0% {
+    visibility: visible;
+  }
+}
+
+@keyframes valo-placeholder-animate-in {
+  0% {
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes valo-placeholder-animate-out {
+  100% {
+    visibility: visible;
+  }
+}
+
+@-moz-keyframes valo-placeholder-animate-out {
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes valo-placeholder-animate-out {
+  100% {
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes valo-anim-fade-in {
+  0% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes valo-anim-fade-in {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes valo-anim-fade-in {
+  0% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes valo-anim-fade-out {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes valo-anim-fade-out {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes valo-anim-fade-out {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes valo-anim-slide-in-down {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+}
+
+@-moz-keyframes valo-anim-slide-in-down {
+  0% {
+    -moz-transform: translateY(-100%);
+  }
+}
+
+@keyframes valo-anim-slide-in-down {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes valo-anim-slide-in-up {
+  0% {
+    -webkit-transform: translateY(100%);
+  }
+}
+
+@-moz-keyframes valo-anim-slide-in-up {
+  0% {
+    -moz-transform: translateY(100%);
+  }
+}
+
+@keyframes valo-anim-slide-in-up {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes valo-anim-slide-in-left {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@-moz-keyframes valo-anim-slide-in-left {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+}
+
+@keyframes valo-anim-slide-in-left {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes valo-anim-slide-in-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@-moz-keyframes valo-anim-slide-in-right {
+  0% {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+@keyframes valo-anim-slide-in-right {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes valo-anim-slide-out-down {
+  100% {
+    -webkit-transform: translateY(100%);
+  }
+}
+
+@-moz-keyframes valo-anim-slide-out-down {
+  100% {
+    -moz-transform: translateY(100%);
+  }
+}
+
+@keyframes valo-anim-slide-out-down {
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes valo-anim-slide-out-up {
+  100% {
+    -webkit-transform: translateY(-100%);
+  }
+}
+
+@-moz-keyframes valo-anim-slide-out-up {
+  100% {
+    -moz-transform: translateY(-100%);
+  }
+}
+
+@keyframes valo-anim-slide-out-up {
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes valo-anim-slide-out-left {
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@-moz-keyframes valo-anim-slide-out-left {
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+@keyframes valo-anim-slide-out-left {
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes valo-anim-slide-out-right {
+  100% {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@-moz-keyframes valo-anim-slide-out-right {
+  100% {
+    -moz-transform: translateX(100%);
+  }
+}
+
+@keyframes valo-anim-slide-out-right {
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes valo-overlay-animate-in {
+  0% {
+    -webkit-transform: translatey(-4px);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes valo-overlay-animate-in {
+  0% {
+    -moz-transform: translatey(-4px);
+    opacity: 0;
+  }
+}
+
+@keyframes valo-overlay-animate-in {
+  0% {
+    -webkit-transform: translatey(-4px);
+    transform: translatey(-4px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes valo-anim-drop-fade-out {
+  100% {
+    opacity: 0;
+    -webkit-transform: translatey(30%);
+  }
+}
+
+@-moz-keyframes valo-anim-drop-fade-out {
+  100% {
+    opacity: 0;
+    -moz-transform: translatey(30%);
+  }
+}
+
+@keyframes valo-anim-drop-fade-out {
+  100% {
+    opacity: 0;
+    -webkit-transform: translatey(30%);
+    transform: translatey(30%);
+  }
+}
+
+@font-face {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../base/fonts/fontawesome-webfont.eot");
+  src: url("../base/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../base/fonts/fontawesome-webfont.woff") format("woff"), url("../base/fonts/fontawesome-webfont.ttf") format("truetype"), url("../base/fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
+}
+
+.FontAwesome {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../valo/fonts/open-sans/OpenSans-Light-webfont.eot");
+  src: url("../valo/fonts/open-sans/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/open-sans/OpenSans-Light-webfont.woff") format("woff"), url("../valo/fonts/open-sans/OpenSans-Light-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../valo/fonts/open-sans/OpenSans-Regular-webfont.eot");
+  src: url("../valo/fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/open-sans/OpenSans-Regular-webfont.woff") format("woff"), url("../valo/fonts/open-sans/OpenSans-Regular-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../valo/fonts/open-sans/OpenSans-Semibold-webfont.eot");
+  src: url("../valo/fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../valo/fonts/open-sans/OpenSans-Semibold-webfont.woff") format("woff"), url("../valo/fonts/open-sans/OpenSans-Semibold-webfont.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@-webkit-keyframes v-rotate-360 {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes v-rotate-360 {
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes v-rotate-360 {
+  to {
+    -o-transform: rotate(360deg);
+  }
+}
+
+@keyframes v-rotate-360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes v-progress-start {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@-moz-keyframes v-progress-start {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes v-progress-start {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes v-progress-delay {
+  0% {
+    width: 50%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@-moz-keyframes v-progress-delay {
+  0% {
+    width: 50%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes v-progress-delay {
+  0% {
+    width: 50%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes v-progress-wait {
+  0% {
+    width: 90%;
+    height: 4px;
+  }
+
+  3% {
+    width: 91%;
+    height: 7px;
+  }
+
+  100% {
+    width: 96%;
+    height: 7px;
+  }
+}
+
+@-moz-keyframes v-progress-wait {
+  0% {
+    width: 90%;
+    height: 4px;
+  }
+
+  3% {
+    width: 91%;
+    height: 7px;
+  }
+
+  100% {
+    width: 96%;
+    height: 7px;
+  }
+}
+
+@keyframes v-progress-wait {
+  0% {
+    width: 90%;
+    height: 4px;
+  }
+
+  3% {
+    width: 91%;
+    height: 7px;
+  }
+
+  100% {
+    width: 96%;
+    height: 7px;
+  }
+}
+
+@-webkit-keyframes v-progress-wait-pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes v-progress-wait-pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes v-progress-wait-pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.v-shadow,
+.v-shadow-window {
+  display: none;
+}
+.v-ie8 .v-shadow, .v-ie8
+.v-shadow-window {
+  display: block;
+}
+.v-ie8 .v-shadow .top, .v-ie8
+.v-shadow-window .top {
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  bottom: 6px;
+  left: -10px;
+  background: black;
+  filter: alpha(opacity=5) progid:DXImageTransform.Microsoft.blur(pixelradius=10, makeShadow=false);
+}
+.v-ie8 .v-shadow .top-left, .v-ie8
+.v-shadow-window .top-left {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: black;
+  filter: alpha(opacity=9) progid:DXImageTransform.Microsoft.blur(pixelradius=0, makeShadow=false);
+}
+
+@-webkit-keyframes v-popupview-animate-in {
+  0% {
+    -webkit-transform: scale(0);
+  }
+}
+
+@-moz-keyframes v-popupview-animate-in {
+  0% {
+    -moz-transform: scale(0);
+  }
+}
+
+@keyframes v-popupview-animate-in {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+
+@-webkit-keyframes valo-modal-window-indication {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes valo-modal-window-indication {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes valo-modal-window-indication {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes valo-anim-scale-down-fade-out {
+  100% {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes valo-anim-scale-down-fade-out {
+  100% {
+    -moz-transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes valo-anim-scale-down-fade-out {
+  100% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.v-widget {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  white-space: normal;
+}
+
+.v-generated-body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.v-app {
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.v-ui {
+  position: relative;
+}
+
+.v-ui.v-ui-embedded {
+  margin-top: -1px;
+  border-top: 1px solid transparent;
+}
+
+.v-ui:focus {
+  outline: none;
+}
+
+.v-overlay-container {
+  width: 0;
+  height: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+.v-drag-element {
+  z-index: 60000;
+  position: absolute !important;
+  cursor: default;
+}
+
+.v-clip {
+  overflow: hidden;
+}
+
+.v-scrollable {
+  overflow: auto;
+}
+.v-scrollable > .v-widget {
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.v-ios.v-webkit .v-scrollable {
+  -webkit-overflow-scrolling: touch;
+}
+
+.v-ios5.v-webkit .v-scrollable {
+  -webkit-overflow-scrolling: none;
+}
+
+.v-assistive-device-only {
+  position: absolute;
+  top: -2000px;
+  left: -2000px;
+  width: 10px;
+  overflow: hidden;
+}
+
+.v-icon {
+  cursor: inherit;
+}
+
+.v-icon,
+.v-errorindicator,
+.v-required-field-indicator {
+  display: inline-block;
+  line-height: inherit;
+}
+
+.v-caption {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1.55;
+}
+
+.v-captiontext {
+  display: inline-block;
+  line-height: inherit;
+}
+
+div.v-layout.v-horizontal.v-widget {
+  white-space: nowrap;
+}
+
+.v-layout.v-vertical > .v-expand,
+.v-layout.v-horizontal > .v-expand {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.v-slot,
+.v-spacing {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.v-vertical > .v-slot:after {
+  display: inline-block;
+  clear: both;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.v-vertical > .v-slot,
+.v-vertical > .v-expand > .v-slot {
+  display: block;
+  clear: both;
+}
+
+.v-horizontal > .v-slot,
+.v-horizontal > .v-expand > .v-slot {
+  height: 100%;
+}
+
+.v-vertical > .v-spacing,
+.v-vertical > .v-expand > .v-spacing {
+  width: 0 !important;
+  display: block;
+  clear: both;
+}
+
+.v-horizontal > .v-spacing,
+.v-horizontal > .v-expand > .v-spacing {
+  height: 0 !important;
+}
+
+.v-align-middle:before,
+.v-align-bottom:before,
+.v-expand > .v-align-middle:before,
+.v-expand > .v-align-bottom:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+}
+
+.v-align-middle,
+.v-align-bottom {
+  white-space: nowrap;
+}
+
+.v-align-middle > .v-widget,
+.v-align-bottom > .v-widget {
+  display: inline-block;
+}
+
+.v-align-middle,
+.v-align-middle > .v-widget {
+  vertical-align: middle;
+}
+
+.v-align-bottom,
+.v-align-bottom > .v-widget {
+  vertical-align: bottom;
+}
+
+.v-align-center {
+  text-align: center;
+}
+
+.v-align-center > .v-widget {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.v-align-right {
+  text-align: right;
+}
+
+.v-align-right > .v-widget {
+  margin-left: auto;
+}
+
+.v-has-caption,
+.v-has-caption > .v-caption {
+  display: inline-block;
+}
+
+.v-caption-on-left,
+.v-caption-on-right {
+  white-space: nowrap;
+}
+
+.v-caption-on-top > .v-caption,
+.v-caption-on-bottom > .v-caption {
+  display: block;
+}
+
+.v-caption-on-left > .v-caption {
+  padding-right: .5em;
+}
+
+.v-caption-on-left > .v-widget,
+.v-caption-on-right > .v-widget {
+  display: inline-block;
+}
+
+.v-has-caption.v-has-width > .v-widget {
+  width: 100% !important;
+}
+
+.v-has-caption.v-has-height > .v-widget {
+  height: 100% !important;
+}
+
+.v-gridlayout {
+  position: relative;
+}
+
+.v-gridlayout-slot {
+  position: absolute;
+  line-height: 1.55;
+}
+
+.v-gridlayout-spacing-on {
+  overflow: hidden;
+}
+
+.v-gridlayout-spacing,
+.v-gridlayout-spacing-off {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.v-gridlayout-spacing-off {
+  overflow: hidden;
+}
+
+.v-calendar-month-day-scrollable {
+  overflow-y: scroll;
+}
+
+.v-calendar-week-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.v-calendar-current-time {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: red;
+  z-index: 2;
+}
+
+.v-calendar-event-resizetop,
+.v-calendar-event-resizebottom {
+  position: absolute;
+  height: 5%;
+  min-height: 3px;
+  width: 100%;
+  z-index: 1;
+}
+
+.v-calendar-event-resizetop {
+  cursor: row-resize;
+  top: 0;
+}
+
+.v-calendar-event-resizebottom {
+  cursor: row-resize;
+  bottom: 0;
+}
+
+.v-calendar-header-month td:first-child {
+  padding-left: 20px;
+}
+
+.v-calendar-month-sizedheight .v-calendar-month-day {
+  height: 100px;
+}
+
+.v-calendar-month-sizedwidth .v-calendar-month-day {
+  width: 100px;
+}
+
+.v-calendar-header-month-Hsized .v-calendar-header-day {
+  width: 101px;
+}
+
+.v-calendar-header-month-Hsized td:first-child {
+  padding-left: 21px;
+}
+
+.v-calendar-header-day-Hsized {
+  width: 200px;
+}
+
+.v-calendar-week-numbers-Vsized .v-calendar-week-number {
+  height: 100px;
+  line-height: 100px;
+}
+
+.v-calendar-week-wrapper-Vsized {
+  height: 400px;
+  overflow-x: hidden !important;
+}
+
+.v-calendar-times-Vsized .v-calendar-time {
+  height: 38px;
+}
+
+.v-calendar-times-Hsized .v-calendar-time {
+  width: 42px;
+}
+
+.v-calendar-day-times-Vsized .v-datecellslot,
+.v-calendar-day-times-Vsized .v-datecellslot-even {
+  height: 18px;
+}
+
+.v-calendar-day-times-Hsized,
+.v-calendar-day-times-Hsized .v-datecellslot,
+.v-calendar-day-times-Hsized .v-datecellslot-even {
+  width: 200px;
+}
+
+.v-colorpicker-popup.v-window {
+  min-width: 220px !important;
+}
+
+.v-colorpicker-gradient-container {
+  overflow: visible !important;
+}
+
+.v-colorpicker-gradient-clicklayer {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.rgb-gradient .v-colorpicker-gradient-background {
+  background: url(../valo/components/img/colorpicker/gradient2.png);
+}
+
+.hsv-gradient .v-colorpicker-gradient-foreground {
+  background: url(../valo/components/img/colorpicker/gradient.png);
+}
+
+.v-colorpicker-gradient-higherbox:before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 7px;
+  border: 1px solid #fff;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: -6px;
+  left: -6px;
+}
+
+.v-colorpicker-popup .v-slider.v-slider-red:before {
+  background-color: red;
+}
+
+.v-colorpicker-popup .v-slider.v-slider-green:before {
+  background-color: green;
+}
+
+.v-colorpicker-popup .v-slider.v-slider-blue:before {
+  background-color: blue;
+}
+
+.v-colorpicker-popup .v-slider.hue-slider:before {
+  background: url(../valo/components/img/colorpicker/slider_hue_bg.png);
+}
+
+.v-colorpicker-popup input.v-textfield-dark {
+  color: #fff;
+}
+
+.v-colorpicker-popup input.v-textfield-light {
+  color: #000;
+}
+
+.v-colorpicker-grid {
+  height: 319px;
+}
+
+.v-colorpicker-popup .colorselect td {
+  line-height: 15px;
+}
+
+.v-table-header table,
+.v-table-footer table,
+.v-table-table {
+  border-spacing: 0;
+  border-collapse: separate;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.55;
+}
+
+.v-table-resizer,
+.v-table-sort-indicator {
+  float: right;
+}
+
+.v-table-caption-container-align-center {
+  text-align: center;
+}
+
+.v-table-caption-container-align-right {
+  text-align: right;
+}
+
+.v-table-header td,
+.v-table-footer td,
+.v-table-cell-content {
+  padding: 0;
+}
+
+.v-table-sort-indicator {
+  width: 0;
+}
+
+.v-tabsheet-hidetabs > .v-tabsheet-tabcontainer,
+.v-tabsheet-spacertd,
+.v-disabled .v-tabsheet-scroller,
+.v-tabsheet .v-disabled .v-tabsheet-caption-close {
+  display: none;
+}
+
+.v-tabsheet {
+  overflow: visible !important;
+  position: relative;
+}
+
+.v-tabsheet-tabcontainer table,
+.v-tabsheet-tabcontainer tbody,
+.v-tabsheet-tabcontainer tr {
+  display: inline-block;
+  border-spacing: 0;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+.v-tabsheet-tabcontainer td {
+  display: inline-block;
+  padding: 0;
+}
+
+.v-tabsheet-tabs {
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.v-tabsheet-content {
+  position: relative;
+}
+.v-tabsheet-content > div > .v-scrollable > .v-margin-top {
+  padding-top: 12px;
+}
+.v-tabsheet-content > div > .v-scrollable > .v-margin-right {
+  padding-right: 12px;
+}
+.v-tabsheet-content > div > .v-scrollable > .v-margin-bottom {
+  padding-bottom: 12px;
+}
+.v-tabsheet-content > div > .v-scrollable > .v-margin-left {
+  padding-left: 12px;
+}
+
+.v-splitpanel-vertical,
+.v-splitpanel-horizontal {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.v-splitpanel-hsplitter {
+  z-index: 100;
+  cursor: e-resize;
+  cursor: col-resize;
+}
+
+.v-splitpanel-vsplitter {
+  z-index: 100;
+  cursor: s-resize;
+  cursor: row-resize;
+}
+
+.v-splitpanel-hsplitter:after,
+.v-splitpanel-vsplitter:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.v-splitpanel-hsplitter div,
+.v-splitpanel-vsplitter div {
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+}
+
+.v-splitpanel-hsplitter div:before,
+.v-splitpanel-vsplitter div:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.v-disabled [class$="splitter"] div {
+  cursor: default;
+}
+.v-disabled [class$="splitter"] div:before {
+  display: none;
+}
+
+.v-splitpanel-horizontal .v-splitpanel-second-container {
+  position: static !important;
+  display: inline-block;
+  vertical-align: top;
+}
+.v-splitpanel-horizontal .v-splitpanel-first-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* This contains all of your theme. */

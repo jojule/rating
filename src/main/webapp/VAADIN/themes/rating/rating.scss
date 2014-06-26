@@ -1,10 +1,37 @@
-@import "../reindeer/reindeer.scss";
+$v-app-loading-text: "Loading resources...";
+//$v-app-background-color: hsl(160, 55%, 40%);
+//$v-shadow-style: none;
+//$v-bevel-style: none;
+//$v-gradient-depth: 3%;
+//$v-focus-color: #0bf;
+//$v-font-size: 18px;
+//$v-unit-size: 39px;
+//$v-font-weight: 400;
+//$v-border-radius: 18px;
+//$v-selection-color: orange;
+//$v-bevel-style: inset 0 -2px 0 shade;
+
+//$v-font-family: "Open Sans", sans-serif;
+
+@import "../valo/valo";
+
+
+
+@mixin width-range($min, $max: null) {
+  &[width-range~="#{$min}-#{$max}"] {
+    @content;
+  }
+};
+
 
 /* This contains all of your theme. */
 @mixin rating {
 
-  /* Include all the styles from the reindeer theme */
-  @include reindeer;
+  @include valo;
+  
+  .v-table-cell-content {
+    white-space: normal;
+  }
 
   .presentation-form {
 
@@ -19,8 +46,8 @@
 
     input.v-textfield.topic {
       width: 100%;
-      font-size: 30px;
-      height: 40px;
+      font-size: 1.2 * $v-font-size;
+      height: 1.2 * $v-unit-size;
     }
 
     .v-textarea {
@@ -33,31 +60,28 @@
       margin-right: 5px;
       margin-top: 10px;
     }
+    
+    @include width-range(0, 400px) {
+      input.v-textfield.topic {
+        font-size: $v-font-size;
+        height: $v-unit-size;
+      }
+
+      .v-textfield, .v-datefield {
+        width: 100%;
+      }
+    }
+    
+    @include width-range(600px) {
+      input.v-textfield.topic {
+        font-size: 1.5 * $v-font-size;
+        height: 1.5 * $v-unit-size;
+      }
+    }
 
   }
 
-  .presentation-form[width-range~="0-400px"] {
-    input.v-textfield.topic {
-      font-size: 20px;
-      height: 30px;
-    }
-
-    .v-textfield, .v-datefield {
-      width: 100%;
-    }
-
-  }
-
-
-  .presentation-form[width-range~="600px-"] {
-    input.v-textfield.topic {
-      font-size: 40px;
-      height: 50px;
-    }
-  }
-
-    .presentation-form.admin {
-
+  .presentation-form.admin {
     .v-textfield {
       background-color: transparent;
       border-style: hidden;

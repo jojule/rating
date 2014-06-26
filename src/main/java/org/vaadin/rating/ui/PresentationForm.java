@@ -28,7 +28,7 @@ public class PresentationForm extends CssLayout {
     TextArea overview = new TextArea("Overview");
 
     Button deleteButton = new Button("Delete", this::delete);
-    Button resetButton = new Button("Reset", e -> fieldGroup.discard());
+    Button resetButton = new Button("Discard Changes", e -> fieldGroup.discard());
     Button saveButton = new Button("Save", this::save);
 
     @PostConstruct
@@ -46,7 +46,9 @@ public class PresentationForm extends CssLayout {
         setStyleName("presentation-form");
         speaker.setStyleName("speaker");
         topic.setStyleName("topic");
-        saveButton.setStyleName(Reindeer.BUTTON_DEFAULT);
+        saveButton.setStyleName("primary");
+        resetButton.addStyleName("borderless");
+        deleteButton.addStyleName("danger");
     }
 
     void save(Button.ClickEvent e) {
