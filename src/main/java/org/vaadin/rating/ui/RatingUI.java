@@ -1,11 +1,14 @@
 package org.vaadin.rating.ui;
 
+import com.vaadin.annotations.Theme;
+import com.vaadin.server.FontAwesome;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 
 import javax.servlet.annotation.WebServlet;
 
+@Theme("dawn")
 @SuppressWarnings("serial")
 public class RatingUI extends UI {
 
@@ -13,9 +16,9 @@ public class RatingUI extends UI {
     public static class Servlet extends VaadinServlet {
     }
 
-    TextField name = new TextField("Who are you?");
-    Button greetButton = new Button("Greet");
-    VerticalLayout layout = new VerticalLayout(name, greetButton);
+    VerticalLayout todoList = new VerticalLayout();
+    Button addButton = new Button(FontAwesome.PLUS);
+    VerticalLayout layout = new VerticalLayout(todoList, addButton);
 
 
     @Override
@@ -24,9 +27,12 @@ public class RatingUI extends UI {
         setContent(layout);
 
         layout.setSizeFull();
-        layout.setComponentAlignment(name, Alignment.BOTTOM_CENTER);
-        layout.setComponentAlignment(greetButton, Alignment.TOP_CENTER);
+        todoList.setSizeUndefined();
+        layout.setComponentAlignment(todoList, Alignment.BOTTOM_CENTER);
+        layout.setComponentAlignment(addButton, Alignment.TOP_CENTER);
+        layout.setSpacing(true);
+        todoList.setSpacing(true);
 
-        greetButton.addClickListener(e -> Notification.show("Hi " + name.getValue()));
+        addButton.addClickListener(e -> todoList.addComponent(new TodoItem()));
     }
 }
