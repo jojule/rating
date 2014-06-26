@@ -23,7 +23,7 @@ public class RatingService {
     @PersistenceContext
     private EntityManager em;
 
-    public void sendLoginLink(String email, String appLocation) {
+    public String sendLoginLink(String email, String appLocation) {
 
         Long id;
         if (emailToIdMap.containsKey(email)) id = emailToIdMap.get(email);
@@ -37,6 +37,8 @@ public class RatingService {
         String url = appLocation + "#!/" + id;
         sendEmail(email, email + " can log in at " + url);
 
+        return url;
+        
         // TODO add map cleanup to conserve memory
     }
 

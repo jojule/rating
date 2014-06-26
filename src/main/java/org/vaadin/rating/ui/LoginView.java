@@ -5,6 +5,7 @@ import com.vaadin.data.validator.EmailValidator;
 import com.vaadin.event.ShortcutAction;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
+import com.vaadin.server.ExternalResource;
 import com.vaadin.ui.*;
 import org.vaadin.rating.service.RatingService;
 import org.vaadin.rating.service.User;
@@ -37,14 +38,17 @@ public class LoginView extends VerticalLayout implements View {
 
     void login(Button.ClickEvent clickEvent) {
         if (!email.getValue().equals("") && email.isValid()) {
-            service.sendLoginLink(email.getValue(), getUI().getPage().getLocation().toString());
+            String url = service.sendLoginLink(email.getValue(), getUI().getPage().getLocation().toString());
 
             // Delete UI and ask to check email
             removeAllComponents();
             Label msg = new Label("Login link sent to " + email.getValue());
             addComponent(msg);
+            final Link link = new Link("In the demo, just forward to UI...", new ExternalResource(url));
+            addComponent(link);
             msg.setSizeUndefined();
             setComponentAlignment(msg, Alignment.MIDDLE_CENTER);
+            setComponentAlignment(link, Alignment.MIDDLE_CENTER);
         } else Notification.show("Email address is needed to log in");
     }
 
