@@ -157,7 +157,15 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
-                        
+			<plugin>
+  				<groupId>org.apache.openejb.maven</groupId>
+  				<artifactId>tomee-maven-plugin</artifactId>
+  				<version>1.6.0.2</version>
+  				<configuration>
+    					<tomeeVersion>1.7.0-SNAPSHOT</tomeeVersion>
+    					<tomeeClassifier>plus</tomeeClassifier>
+  				</configuration>
+			</plugin>
                         <plugin>
                             <groupId>org.jasig.maven</groupId>
                             <artifactId>sass-maven-plugin</artifactId>
