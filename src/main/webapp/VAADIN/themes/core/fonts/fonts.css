@@ -1,0 +1,61 @@
+/*
+Syntax error: Undefined variable: "$relativePaths".
+        on line 7 of ./core/fonts/fonts.scss
+
+2: 	@include fonticons;
+3: }
+4: 
+5: $fontawesome-pathPrefix: null;
+6:   
+7: @if $relativePaths == false {
+8:   $fontawesome-pathPrefix: "../core/fonts/";
+9: }
+10: 
+11: @mixin fonticons {
+12: 	@include font(FontAwesome, fontawesome-webfont);
+
+Backtrace:
+./core/fonts/fonts.scss:7
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/script/tree/operation.rb:64:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:269:in `visit_if'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:153:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:153:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:174:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:161:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:181:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/engine.rb:275:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:347:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:191:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:188:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:188:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin/compiler.rb:223:in `watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/plugin.rb:108:in `method_missing'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/exec.rb:508:in `watch_or_update'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/exec.rb:346:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/exec.rb:43:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/lib/sass/exec.rb:22:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.3.0.rc.2/bin/sass:9:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$relativePaths\".\A         on line 7 of ./core/fonts/fonts.scss\A \A 2: 	@include fonticons;\A 3: }\A 4: \A 5: $fontawesome-pathPrefix: null;\A 6:   \A 7: @if $relativePaths == false {\A 8:   $fontawesome-pathPrefix: \"../core/fonts/\";\A 9: }\A 10: \A 11: @mixin fonticons {\A 12: 	@include font(FontAwesome, fontawesome-webfont);"; }

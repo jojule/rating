@@ -1,10 +1,25 @@
-@import "../reindeer/reindeer.scss";
+$v-app-loading-text: "Loading resources...";
+//$v-app-background-color: hsl(160, 55%, 40%);
+//$v-shadow-style: none;
+//$v-bevel-style: none;
+//$v-gradient-depth: 3%;
+//$v-focus-color: #0bf;
+//$v-font-size: 18px;
+//$v-unit-size: 39px;
+//$v-font-weight: 400;
+//$v-border-radius: 18px;
+//$v-selection-color: orange;
+//$v-bevel-style: inset 0 -2px 0 shade;
+
+//$v-font-family: "Open Sans", sans-serif;
+
+@import "../valo/valo";
 
 /* This contains all of your theme. */
 @mixin rating {
 
-  /* Include all the styles from the reindeer theme */
-  @include reindeer;
+  @include v-valo;
+  @include v-valo-component-group;
 
   .presentation-form {
 
