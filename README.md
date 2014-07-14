@@ -16,10 +16,3 @@ This is a mockup app that "authenticates" with email. Instead of sending the ema
 # Workshop
 
 This example app was built for Worldwide Vaadin Hack day organized by nighthacking.com. For the full workshop notes, see workshop.pdf
-
-## Valo theme
-
-This branch uses early developer prerelease of upcoming Valo theme. It required not yet released Vaadin 7.3 for
-theme compilation. Because 7.3 is not released yet, you must use sass-lang compiler and launch it in src/main/webapp/VAADIN/themes directory with command
-
-sass --watch --scss .:.
