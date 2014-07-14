@@ -10,7 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<vaadin.version>7.2.2</vaadin.version>
+		<vaadin.version>7.3.0.beta1</vaadin.version>
 		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
                 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -50,26 +50,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-client-compiled</artifactId>
-			<version>${vaadin.version}</version>
-		</dependency>
-		<!--
-		  Needed when using the widgetset optimizer (custom ConnectorBundleLoaderFactory).
-		  
-		  For widgetset compilation, vaadin-client-compiler is automatically added on the
-		  compilation classpath by vaadin-maven-plugin so normally there is no need for an
-		  explicit dependency.
-		-->
-		<!--
-		<dependency>
-			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-client-compiler</artifactId>
-			<version>${vaadin.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		-->
-		<dependency>
-			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-client</artifactId>
 			<version>${vaadin.version}</version>
 			<scope>provided</scope>
@@ -95,24 +75,19 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
+        <!-- This would be needed if we would implement login email sending
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
             <version>1.4.7</version>
             <scope>provided</scope>
         </dependency>
+        -->
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-cdi</artifactId>
             <version>1.0.0.alpha2</version>
         </dependency>
-        <!--
-        <dependency>
-            <groupId>org.peimari</groupId>
-            <artifactId>dawn</artifactId>
-            <version>1</version>
-        </dependency>
-        -->
         <dependency>
             <groupId>org.vaadin.addons</groupId>
             <artifactId>ratingstars</artifactId>
@@ -157,24 +132,6 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
-                        
-                        <plugin>
-                            <groupId>org.jasig.maven</groupId>
-                            <artifactId>sass-maven-plugin</artifactId>
-                            <version>1.1.1</version>
-                            <configuration>
-                                <sassSourceDirectory>${basedir}/src/main/webapp/VAADIN/themes/rating/</sassSourceDirectory>
-                                <destination>${basedir}/src/main/webapp/VAADIN/themes/rating/</destination>
-                            </configuration>
-                            <executions>
-                                <execution>
-                                    <goals>
-                                        <goal>update-stylesheets</goal>
-                                    </goals>
-                                    <phase>generate-resources</phase>
-                                </execution>
-                            </executions>
-                        </plugin>
 			<plugin>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-maven-plugin</artifactId>

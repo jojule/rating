@@ -1,28 +1,4 @@
-$v-app-loading-text: "Loading resources...";
-//$v-app-background-color: hsl(160, 55%, 40%);
-//$v-shadow-style: none;
-//$v-bevel-style: none;
-//$v-gradient-depth: 3%;
-//$v-focus-color: #0bf;
-//$v-font-size: 18px;
-//$v-unit-size: 39px;
-//$v-font-weight: 400;
-//$v-border-radius: 18px;
-//$v-selection-color: orange;
-//$v-bevel-style: inset 0 -2px 0 shade;
-
-//$v-font-family: "Open Sans", sans-serif;
-
 @import "../valo/valo";
-
-
-
-@mixin width-range($min, $max: null) {
-  &[width-range~="#{$min}-#{$max}"] {
-    @content;
-  }
-};
-
 
 /* This contains all of your theme. */
 @mixin rating {
@@ -60,8 +36,8 @@ $v-app-loading-text: "Loading resources...";
       margin-right: 5px;
       margin-top: 10px;
     }
-    
-    @include width-range(0, 400px) {
+
+    &[width-range ~= "0-400px"] {
       input.v-textfield.topic {
         font-size: $v-font-size;
         height: $v-unit-size;
@@ -71,8 +47,8 @@ $v-app-loading-text: "Loading resources...";
         width: 100%;
       }
     }
-    
-    @include width-range(600px) {
+
+    &[width-range ~= "600px-"] {
       input.v-textfield.topic {
         font-size: 1.5 * $v-font-size;
         height: 1.5 * $v-unit-size;
