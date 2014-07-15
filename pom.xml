@@ -141,23 +141,6 @@
     					<tomeeClassifier>plus</tomeeClassifier>
   				</configuration>
 			</plugin>
-            <plugin>
-                <groupId>org.jasig.maven</groupId>
-                <artifactId>sass-maven-plugin</artifactId>
-                <version>1.1.1</version>
-                <configuration>
-                    <sassSourceDirectory>${basedir}/src/main/webapp/VAADIN/themes/rating/</sassSourceDirectory>
-                    <destination>${basedir}/src/main/webapp/VAADIN/themes/rating/</destination>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>update-stylesheets</goal>
-                        </goals>
-                        <phase>generate-resources</phase>
-                    </execution>
-                </executions>
-            </plugin>
 			<plugin>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-maven-plugin</artifactId>
