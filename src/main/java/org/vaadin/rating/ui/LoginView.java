@@ -12,7 +12,7 @@ import org.vaadin.rating.service.User;
 
 import javax.inject.Inject;
 
-@CDIView
+@CDIView("")
 public class LoginView extends VerticalLayout implements View {
 
     TextField email = new TextField("Your email");

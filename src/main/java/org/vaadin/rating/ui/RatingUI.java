@@ -11,13 +11,11 @@ import org.vaadin.rating.service.RatingService;
 import org.vaadin.rating.service.User;
 
 import javax.inject.Inject;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @Theme("rating")
 @Widgetset("org.vaadin.rating.RatingWidgetSet")
 @SuppressWarnings("serial")
-@CDIUI
+@CDIUI("")
 public class RatingUI extends UI
 {
 
@@ -35,8 +33,5 @@ public class RatingUI extends UI
     @Override
     protected void init(VaadinRequest request) {
         navigator.addProvider(viewProvider);
-
-        // Alpha level CDI add-on is still quite chatty, lets cut the noice
-        Logger.getLogger(CDIViewProvider.class.getCanonicalName()).setLevel(Level.SEVERE);
     }
 }
